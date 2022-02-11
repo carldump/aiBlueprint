@@ -7,6 +7,11 @@
   <title>AI Blueprint</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
+
+
+   <!-- Include Handsfree.js -->
+  <link rel="stylesheet" href="https://unpkg.com/handsfree@8.5.1/build/lib/assets/handsfree.css" />
+  <script src="https://unpkg.com/handsfree@8.5.1/build/lib/handsfree.js"></script>
   <style>
     body {
       margin: 0;
@@ -25,5 +30,12 @@
 </head>
 <body>
   <video id="video" width="920" height="760" autoplay="true"></video>
+
+
+  <script>
+    const handsfree = new Handsfree({hands: true})
+    handsfree.enablePlugins('browser')
+    handsfree.start()
+  </script>
 </body>
 </html>
