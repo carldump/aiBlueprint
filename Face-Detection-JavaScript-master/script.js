@@ -33,3 +33,8 @@ video.addEventListener('playing', () => {
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
   }, 100)
 })
+
+// Hand Gesture Recognition
+const handsfree = new Handsfree({hands: true})
+    handsfree.enablePlugins('browser')
+    handsfree.start()
